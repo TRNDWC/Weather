@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomWeatherCard" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="eZA-aK-gRf"/>
+                <outlet property="humudityView" destination="zdE-nV-oZz" id="499-In-lUB"/>
+                <outlet property="pressureView" destination="CVI-4b-bfZ" id="qvb-fc-Cxv"/>
+                <outlet property="rainView" destination="aGC-oT-lZZ" id="F5k-py-ruw"/>
+                <outlet property="windView" destination="xkM-7Z-g5T" id="Zht-DU-7NA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUy-cD-e1t">
+                    <rect key="frame" x="16" y="75" width="361" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tst-lW-b7e"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-HR-LRo">
+                    <rect key="frame" x="0.0" y="92" width="393" height="710"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="caY-8V-iAx">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="347"/>
+                            <subviews>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xkM-7Z-g5T" customClass="BottomWeatherCardItem" customModule="Weather" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="347"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aGC-oT-lZZ" customClass="BottomWeatherCardItem" customModule="Weather" customModuleProvider="target">
+                                    <rect key="frame" x="199" y="0.0" width="194" height="347"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-ia-ZDl">
+                            <rect key="frame" x="0.0" y="363" width="393" height="347"/>
+                            <subviews>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="CVI-4b-bfZ" customClass="BottomWeatherCardItem" customModule="Weather" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="347"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-nV-oZz" customClass="BottomWeatherCardItem" customModule="Weather" customModuleProvider="target">
+                                    <rect key="frame" x="199" y="0.0" width="194" height="347"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="caY-8V-iAx" firstAttribute="leading" secondItem="U9W-HR-LRo" secondAttribute="leading" id="DSQ-7e-qBY"/>
+                        <constraint firstAttribute="trailing" secondItem="caY-8V-iAx" secondAttribute="trailing" id="Dhc-OL-Gwk"/>
+                        <constraint firstAttribute="trailing" secondItem="lPV-ia-ZDl" secondAttribute="trailing" id="F6k-3v-jNq"/>
+                        <constraint firstItem="lPV-ia-ZDl" firstAttribute="leading" secondItem="U9W-HR-LRo" secondAttribute="leading" id="Hvg-eZ-tLK"/>
+                        <constraint firstItem="lPV-ia-ZDl" firstAttribute="top" secondItem="caY-8V-iAx" secondAttribute="bottom" constant="16" id="TPS-H2-TEe"/>
+                        <constraint firstItem="lPV-ia-ZDl" firstAttribute="height" secondItem="caY-8V-iAx" secondAttribute="height" id="XoX-5T-ff8"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="lUy-cD-e1t" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="1uW-0k-Wme"/>
+                <constraint firstItem="U9W-HR-LRo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BVf-b3-91h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="U9W-HR-LRo" secondAttribute="bottom" constant="16" id="LK4-rZ-hTm"/>
+                <constraint firstItem="U9W-HR-LRo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NNb-FX-Wrg"/>
+                <constraint firstItem="lUy-cD-e1t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Xgq-TX-XzA"/>
+                <constraint firstItem="U9W-HR-LRo" firstAttribute="top" secondItem="lUy-cD-e1t" secondAttribute="bottom" constant="16" id="aGS-qT-upU"/>
+                <constraint firstAttribute="trailing" secondItem="lUy-cD-e1t" secondAttribute="trailing" constant="16" id="kWa-AJ-qaI"/>
+            </constraints>
+            <point key="canvasLocation" x="-5.343511450381679" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

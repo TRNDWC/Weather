@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="mSearchView" destination="rPd-7c-wjO" id="dCb-tU-c5v"/>
+                <outlet property="mToolBar" destination="Ixn-GL-8om" id="rU6-pJ-5Z3"/>
+                <outlet property="searchStackView" destination="jXp-3I-GTA" id="Aze-iO-SD6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jXp-3I-GTA">
+                    <rect key="frame" x="16" y="59" width="361" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixn-GL-8om" customClass="Toolbar" customModule="Weather" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="32" id="FnG-d3-985"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="sel-ZS-bx3"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPd-7c-wjO" customClass="SearchView" customModule="Weather" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="48" width="361" height="711"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jXp-3I-GTA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Nmc-u7-WFD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jXp-3I-GTA" secondAttribute="bottom" id="SsQ-91-D6x"/>
+                <constraint firstItem="jXp-3I-GTA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wzw-GF-jy9"/>
+                <constraint firstAttribute="trailing" secondItem="jXp-3I-GTA" secondAttribute="trailing" constant="16" id="k9w-8T-Vlm"/>
+            </constraints>
+            <point key="canvasLocation" x="113" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
